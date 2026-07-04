@@ -260,7 +260,7 @@ if (contactForm && successModal) {
         `*Service:* ${service}\n\n` +
         `*Details:*\n${msg}`
       );
-      targetUrl = `https://wa.me/94774939597?text=${text}`;
+      targetUrl = `https://wa.me/94702506607?text=${text}`;
       
       if (successModalText) {
         successModalText.textContent = "Opening WhatsApp to send your inquiry directly to Releaf. Thank you!";
