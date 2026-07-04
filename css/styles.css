@@ -88,6 +88,16 @@ a { color: inherit; text-decoration: none; }
 .header-inner { display: flex; align-items: center; gap: 2rem; padding: 0.8rem 0; }
 
 .logo { display: flex; align-items: center; gap: 0.6rem; }
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+.logo-footer .logo-img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
 .logo-text {
   font-family: var(--font-head);
   font-size: 1.55rem;
@@ -1567,6 +1577,7 @@ a { color: inherit; text-decoration: none; }
   .nav-link.active { color: var(--green-300); }
   .nav-toggle { position: relative; z-index: 100; }
   .nav-toggle.open span { background: var(--white); }
+  .logo-img { height: 40px; }
 
   .section { padding: 4.5rem 0; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
