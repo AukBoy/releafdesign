@@ -299,10 +299,18 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="section-kicker">Pricing</p>
-        <h2 class="section-title">Architectural Building Design Packages — 2026</h2>
-        <p class="section-sub">Clear, fixed-price design packages. Pick the level of detail your project needs.</p>
+        <h2 class="section-title" id="packagesTitle">Architectural Design Packages — 2026</h2>
+        <p class="section-sub">Clear, fixed-price packages. Pick the level of detail your project needs.</p>
       </div>
-      <div class="packages-grid">
+
+      <!-- Tab Switcher -->
+      <div class="packages-tabs reveal">
+        <button class="tab-btn active" data-tab="building">Building Design</button>
+        <button class="tab-btn" data-tab="landscape">Landscape Design</button>
+      </div>
+
+      <!-- Building Packages Grid -->
+      <div class="packages-grid" id="buildingPackages">
         <article class="package-card reveal">
           <header class="package-head">
             <h3>Package 01</h3>
@@ -362,8 +370,62 @@
           <a href="#contact" class="btn btn-ghost btn-block">Choose Package</a>
         </article>
       </div>
-      <div class="package-notes reveal">
+
+      <!-- Landscape Packages Grid -->
+      <div class="packages-grid d-none" id="landscapePackages">
+        <article class="package-card reveal">
+          <header class="package-head">
+            <h3>Package 01</h3>
+            <p class="package-price">LKR 30,000<span>/=</span></p>
+            <p class="package-subtitle">Up to 3,000 sq. ft.</p>
+          </header>
+          <ul class="package-list">
+            <li>Landscape Design Layout</li>
+            <li>Hardscape Layout Plan (Paving &amp; Walkways)</li>
+            <li>Softscape Planting Plan</li>
+            <li>Irrigation Layout Plan</li>
+            <li>Landscape Lighting Layout (Optional)</li>
+            <li>Boundary Wall &amp; Fence Details</li>
+            <li>Pergola / Gazebo / Seating Area Details (if applicable)</li>
+            <li>Water Feature / Pond Details (if applicable)</li>
+            <li>Plant Schedule &amp; Material Specifications</li>
+            <li>Construction Details</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-block">Choose Package</a>
+        </article>
+        <article class="package-card package-featured reveal">
+          <span class="package-tag">Most Popular</span>
+          <header class="package-head">
+            <h3>Package 02</h3>
+            <p class="package-price">LKR 50,000<span>/=</span></p>
+            <p class="package-subtitle">Up to 3,000 sq. ft.</p>
+          </header>
+          <ul class="package-list">
+            <li>Landscape Design Layout</li>
+            <li>Hardscape Layout Plan (Paving &amp; Walkways)</li>
+            <li>Softscape Planting Plan</li>
+            <li>Irrigation Layout Plan</li>
+            <li>Landscape Lighting Layout (Optional)</li>
+            <li>Boundary Wall &amp; Fence Details</li>
+            <li>Pergola / Gazebo / Seating Area Details (if applicable)</li>
+            <li>Water Feature / Pond Details (if applicable)</li>
+            <li>Plant Schedule &amp; Material Specifications</li>
+            <li>Construction Details</li>
+            <li>3D Images</li>
+            <li>3D Landscape Images</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Choose Package</a>
+        </article>
+      </div>
+
+      <!-- Building Notes -->
+      <div class="package-notes reveal" id="buildingNotes">
         <p>📋 An additional fee is charged to have the plans certified by a Chartered Structural Engineer.</p>
+        <p>🚗 Site visit: LKR 5,000/= within the Galle area · LKR 7,000/= outside the Galle area.</p>
+      </div>
+
+      <!-- Landscape Notes -->
+      <div class="package-notes reveal d-none" id="landscapeNotes">
         <p>🚗 Site visit: LKR 5,000/= within the Galle area · LKR 7,000/= outside the Galle area.</p>
       </div>
     </div>

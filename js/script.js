@@ -599,3 +599,48 @@ if (heroSlides.length > 0) {
   // Shift slide every 6 seconds
   setInterval(nextSlide, 6000);
 }
+
+// ---------- Packages Tab Switcher ----------
+const tabButtons = document.querySelectorAll(".packages-tabs .tab-btn");
+const buildingPackages = document.getElementById("buildingPackages");
+const landscapePackages = document.getElementById("landscapePackages");
+const buildingNotes = document.getElementById("buildingNotes");
+const landscapeNotes = document.getElementById("landscapeNotes");
+const packagesTitle = document.getElementById("packagesTitle");
+
+if (tabButtons.length > 0) {
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Deactivate all tabs
+      tabButtons.forEach(b => b.classList.remove("active"));
+      // Activate clicked tab
+      btn.classList.add("active");
+      
+      const tabType = btn.getAttribute("data-tab");
+      
+      if (tabType === "building") {
+        // Show Building Packages
+        buildingPackages.classList.remove("d-none");
+        buildingNotes.classList.remove("d-none");
+        landscapePackages.classList.add("d-none");
+        landscapeNotes.classList.add("d-none");
+        
+        buildingPackages.classList.add("packages-grid-fade");
+        setTimeout(() => buildingPackages.classList.remove("packages-grid-fade"), 500);
+        
+        if (packagesTitle) packagesTitle.textContent = "Architectural Building Design Packages — 2026";
+      } else {
+        // Show Landscape Packages
+        landscapePackages.classList.remove("d-none");
+        landscapeNotes.classList.remove("d-none");
+        buildingPackages.classList.add("d-none");
+        buildingNotes.classList.add("d-none");
+        
+        landscapePackages.classList.add("packages-grid-fade");
+        setTimeout(() => landscapePackages.classList.remove("packages-grid-fade"), 500);
+        
+        if (packagesTitle) packagesTitle.textContent = "Landscape Architectural Design Packages — 2026";
+      }
+    });
+  });
+}
