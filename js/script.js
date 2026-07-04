@@ -644,3 +644,30 @@ if (tabButtons.length > 0) {
     });
   });
 }
+
+// ---------- Collapsible Package Lists on Mobile ----------
+const toggleButtons = document.querySelectorAll(".package-toggle-btn");
+
+if (toggleButtons.length > 0) {
+  toggleButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".package-card");
+      if (!card) return;
+      const list = card.querySelector(".package-list");
+      const extra = card.querySelector(".package-extra");
+      
+      const isExpanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", !isExpanded);
+      
+      if (!isExpanded) {
+        if (list) list.classList.add("show");
+        if (extra) extra.classList.add("show");
+        btn.innerHTML = 'Hide Features <span>▴</span>';
+      } else {
+        if (list) list.classList.remove("show");
+        if (extra) extra.classList.remove("show");
+        btn.innerHTML = 'Show Features <span>▾</span>';
+      }
+    });
+  });
+}
