@@ -34,8 +34,8 @@ window.addEventListener("scroll", () => {
 
   // Parallax: hero layers drift slower than the page while the hero is on screen
   if (!reduceMotion && y < window.innerHeight) {
-    heroBg.style.transform = `translateY(${y * 0.25}px)`;
-    heroSketch.style.transform = `translateY(${y * 0.12}px)`;
+    if (heroBg) heroBg.style.transform = `translateY(${y * 0.25}px)`;
+    if (heroSketch) heroSketch.style.transform = `translateY(${y * 0.12}px)`;
   }
 });
 
